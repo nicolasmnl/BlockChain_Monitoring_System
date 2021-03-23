@@ -11,5 +11,5 @@
 
 <h2>How BlockChain Works</h2>
 
-<p><img alt="Image" title="BlockChain Gif Demonstration" src="/home/nicolasmnl/Imagens/BlockChain.Gif">
+<p><img alt="Image" title="BlockChain Gif Demonstration" src="/home/nicolasmnl/Imagens/BlockChain.gif">
 	</p>
