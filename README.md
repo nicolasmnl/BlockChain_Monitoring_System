@@ -13,4 +13,4 @@
 
 <!-- ![BlockChain Model](https://github.com/nicolasmnl/BlockChain_Monitoring_System/blob/main/readme_images/BlockChain.gif) -->
 
-<img src="https://github.com/nicolasmnl/BlockChain_Monitoring_System/blob/main/readme_images/BlockChain.gif" width="900" height="600">
+<img src="https://github.com/nicolasmnl/BlockChain_Monitoring_System/blob/main/readme_images/BlockChain.gif" width="600" height="300">
