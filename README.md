@@ -11,4 +11,4 @@
 
 <h2>How BlockChain Works</h2>
 
-<a href="https://github.com/nicolasmnl/BlockChain_Monitoring_System/blob/main/readme_images/BlockChain.gif" src="https://github.com/nicolasmnl/BlockChain_Monitoring_System/blob/main/readme_images/BlockChain.gif" title="BlockChain basic model"></a>
+![BlockChain Model](https://github.com/nicolasmnl/BlockChain_Monitoring_System/blob/main/readme_images/BlockChain.gif)
