@@ -11,6 +11,6 @@
 
 <h2>How BlockChain Works</h2>
 
-![BlockChain Model](https://github.com/nicolasmnl/BlockChain_Monitoring_System/blob/main/readme_images/BlockChain.gif)
+<!-- ![BlockChain Model](https://github.com/nicolasmnl/BlockChain_Monitoring_System/blob/main/readme_images/BlockChain.gif) -->
 
-<img src="https://github.com/nicolasmnl/BlockChain_Monitoring_System/blob/main/readme_images/BlockChain.gif" width="100" height="100">
+<img src="https://github.com/nicolasmnl/BlockChain_Monitoring_System/blob/main/readme_images/BlockChain.gif" width="1920" height="1080">
