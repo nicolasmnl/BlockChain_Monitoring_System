@@ -3,7 +3,8 @@ from hashlib import sha256
 
 # Create your models here.
 class Block(models.Model):
-    index = models.IntegerField()
+    objects = models.Manager()
+    index = models.AutoField(primary_key=False)
     previous_hash = models.ForeignKey('self', on_delete=models.RESTRICT)
     current_transactions = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)

@@ -55,7 +55,7 @@ ROOT_URLCONF = 'supply_chain_blockchain.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'supply_chain_blockchain.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'djangodatabase',
+        'USER': 'django_db',
+        'PASSWORD': 'n14mot92001',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
