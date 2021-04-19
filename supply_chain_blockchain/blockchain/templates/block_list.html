@@ -7,16 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <ul>
-
-    
-   {% for block in blocks %}
-        
-        {{ block.current_transactions }}
-
-   {% endfor %}
-    
-    
-    </ul>
+    {% for b in blocks %}
+        <h1>>{{b.current_transactions}}</h1>
+    {% endfor %}
 </body>
 </html>
