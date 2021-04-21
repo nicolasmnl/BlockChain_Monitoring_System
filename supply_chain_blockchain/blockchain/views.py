@@ -15,10 +15,8 @@ def proof_of_work(block_hash, current_transactions):
     difficulty = 2
     nonce = 0
     computed_hash = block_hash
-    while not (computed_hash[0].isdigit()):
-
-        nonce += 1
-        computed_hash = calculate_hash(current_transactions)
+    nonce += 1
+    computed_hash = calculate_hash(current_transactions)
     return (computed_hash, nonce)
 
 
@@ -37,6 +35,7 @@ def block_create(request):
         block = form.save(commit=False)
         block.index = len(blocks)
         values = proof_of_work(block.hash, block.current_transactions)
+        block.previous_hash = blocks[len(blocks) - 1]
         block.hash = values[0]
         block.nonce = values[1]
         form.save()

@@ -5,4 +5,5 @@ from .models import Block
 class BlockForm(ModelForm):
     class Meta:
         model = Block
-        fields = ['current_transactions']
+        fields = ('current_transactions',)
+        labels = {'current_transactions': 'Informações sobre a produção do Leite'}
