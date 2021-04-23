@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+
+{%block title %} Seja bem Vindo {%endblock%}
+
+{%block main%}
+
+
+    <div class="row">
+        <div class="col-sm">
+        
+        </div>
+        <div class="col-6">
+            <h1>Seja bem Vindo</h1>
+        </div>
+        <div class="col-sm">
+            {% if user.is_authenticated %}
+                <p>Ola {{ user.username }} <a href="{% url 'log_out' %}" class="btn btn-danger">Logout</a> </p>
+                <a href="{% url 'block_list' %}" class="btn btn-info">Veja a Blockchain</a>
+                <p></p>
+            {% else %}
+                <a href="{% url 'login' %}" class="btn btn-success">Login</a>
+            {% endif %}
+        </div>
+    </div>
+
+    
+
+    
+
+{%endblock%}

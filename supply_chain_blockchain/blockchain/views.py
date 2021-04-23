@@ -20,13 +20,13 @@ def proof_of_work(block_hash, current_transactions):
     return (computed_hash, nonce)
 
 
-
-
+@login_required
 def block_list(request):
     blocks = Block.objects.all()
     return render(request, 'block_list.html', {'blocks': blocks})
 
 
+@login_required
 def block_create(request):
     blocks = Block.objects.all()
     form = BlockForm(request.POST or None)

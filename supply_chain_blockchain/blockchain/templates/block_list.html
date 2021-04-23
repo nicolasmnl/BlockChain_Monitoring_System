@@ -1,15 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    {% for b in blocks %}
-        <h1>>{{b.current_transactions}}</h1>
-        <h2>{{b.hash}}</h2>
-    {% endfor %}
-</body>
-</html>
+{% extends 'base.html' %}
+
+
+
+{%block title %} Blocks List {%endblock%}
+
+{%block main%}
+    <div class="row">
+        <div class="col-md">
+            {% if user.is_authenticated %}
+                <p>Ola {{ user.username }} <a href="{% url 'log_out' %}" class="btn btn-danger">Logout</a> </p>
+                
+                <p></p>
+                <a href="{% url 'block_create' %}" >Create New Block</a>
+            {% endif %}
+        </div>
+        <div class="col-6">
+            <ul class="list-group list-group-flush">
+                {% for b in blocks %}
+                    <li class="list-group-item">
+                        <h3>Index: {{b.index}}</h3>
+                        <h4>Transaction: {{b.current_transactions}}</h4>
+                        <p>Hash: {{b.hash}}</p>                    
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-md">
+            
+            </div>
+        </div>
+    </div>
+
+    
+
+
+    
+
+
+{%endblock%}
+

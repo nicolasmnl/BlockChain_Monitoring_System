@@ -16,9 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from blockchain import urls as blockchain_urls
+from home import urls as home_urls
+from django.conf import settings
+from django.conf.urls.static import static
+from django.contrib.auth import views as auth_views
+
 
 urlpatterns = [
+    path('', include(home_urls)),
     path('admin/', admin.site.urls),
-    path('blockchain/', include(blockchain_urls))
+    path('blockchain/', include(blockchain_urls)),
+    path('login/', auth_views.LoginView.as_view(), name='login'),
     
 ]
