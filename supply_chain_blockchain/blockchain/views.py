@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Block
 from .forms import BlockForm
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, permission_required
 from hashlib import sha256
 # Create your views here.
 
@@ -27,6 +27,7 @@ def block_list(request):
 
 
 @login_required
+@permission_required('blockchain.add_block', login_url="/login")
 def block_create(request):
     blocks = Block.objects.all()
     form = BlockForm(request.POST or None)

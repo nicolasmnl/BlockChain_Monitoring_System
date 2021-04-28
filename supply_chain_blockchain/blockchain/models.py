@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.postgres.fields import ArrayField
 from hashlib import sha256
 
 def calculate_hash(content):
