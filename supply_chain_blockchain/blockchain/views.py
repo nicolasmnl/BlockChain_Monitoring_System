@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Block
-from .forms import  BlockForm, TransactionForm
+from .forms import  BlockForm, ProducerForm
 from django.contrib.auth.decorators import login_required, permission_required
 from hashlib import sha256
 # Create your views here.
@@ -20,15 +20,15 @@ def proof_of_work(block_hash, current_transactions):
 
 @login_required
 def block_list(request):
-    blocks = Block.objects.all()
+    blocks = Block.objects.all().order_by('index')
     return render(request, 'block_list.html', {'blocks': blocks})
 
 
 @login_required
 @permission_required('blockchain.add_block', login_url="/login")
-def block_create(request):
-    blocks = Block.objects.all()
-    form = TransactionForm(request.POST or None)
+def producer_block_create(request):
+    blocks = Block.objects.all().order_by('index')
+    form = ProducerForm(request.POST or None)
 
     if form.is_valid():
         registro_animal = request.POST['registro_animal']
@@ -72,6 +72,7 @@ def block_create(request):
     return render(request, 'block_form.html', {'form': form})
 
 @login_required
+@permission_required('blockchain.add_block', login_url="/login")
 def block_view(request, hashcode):
     block = get_object_or_404(Block, pk=hashcode)
     form = BlockForm(instance=block)
@@ -79,3 +80,5 @@ def block_view(request, hashcode):
     if(form.is_valid()):
         return redirect('block_list')
     return render(request, 'block_form.html', {'form':form})
+
+

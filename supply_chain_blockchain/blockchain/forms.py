@@ -11,7 +11,7 @@ class BlockForm(ModelForm):
         labels = {'current_transactions': 'Informações sobre a produção do Leite'}
 
 
-class TransactionForm(forms.Form):
+class ProducerForm(forms.Form):
     registro_animal = forms.CharField()
     volume = forms.FloatField()
     dia_horario = forms.DateTimeField()
@@ -41,7 +41,31 @@ class TransactionForm(forms.Form):
 
 
 
+class FirstTransportationForm(forms.Form):
+    registro_veiculo1 = forms.CharField()
+    temperatura_transporte = forms.FloatField()
+    tempo_transporte = forms.FloatField()
 
+class SecondTransportationForm(forms.Form):
+    registro_veiculo_final = forms.CharField()
+    temperatura_transporte_final = forms.FloatField()
+    tempo_transporte_final = forms.FloatField()
+
+class IndustryForm(forms.Form):
+    volume_resfriamento = forms.FloatField()
+    dia_hora_resfriamento = forms.DateTimeField()
+    temperatura_resfriamento = forms.FloatField()
+    ph_resfriamento = forms.FloatField()
+
+
+    volume_envase = forms.FloatField()
+    dia_hora_envase = forms.DateTimeField()
+    lote = forms.CharField()
+
+ 
+
+class ProductProducerForm(forms.Form):
+    pass
         
 
 

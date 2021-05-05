@@ -32,6 +32,3 @@ class Block(models.Model):
 
 
     
-
-
-#sha256(first_hash.encode()).hexdigest()

@@ -8,7 +8,7 @@
 
     <h1>Coloque aqui as informações necessárias</h1>
 
-    <form action="{% url 'block_create'%}"  method = "POST">
+    <form action="{% url 'producer_block_create'%}"  method = "POST">
 
         {% csrf_token %}
         {{form.as_p}}
