@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
 from hashlib import sha256
+from producer.models import Producer
+from industry.models import Industry
 
 def calculate_hash(content):
     first_hash = sha256(content.encode()).hexdigest()

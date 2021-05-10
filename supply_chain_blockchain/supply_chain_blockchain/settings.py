@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'bootstrap4',
     'blockchain',
     'home',
+    'producer',
+    'industry',
 ]
 
 MIDDLEWARE = [
