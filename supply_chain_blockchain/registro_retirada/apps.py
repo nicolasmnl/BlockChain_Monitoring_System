@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class IndustryConfig(AppConfig):
+class RegistroRetiradaConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'industry'
+    name = 'registro_retirada'
