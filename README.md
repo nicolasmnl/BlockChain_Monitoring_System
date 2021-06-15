@@ -25,3 +25,6 @@
 <p>Well, each block in the chain contains an immutable cryptographic signature called a hash. And every block is linked to the previous one through this hash. If something happens with the data of the block, the hash is immediatly changed, and now, all the blocks linked are no long valid, which means that if someone wants to corrupt a Block, he would have to change each and every block in the chain.</p>
 
 <p>Text addapted from https://www.euromoney.com/learning/blockchain-explained/what-is-blockchain.</p>
+
+Documentação com algumas dificuldades e requisitos:
+https://docs.google.com/document/d/1ugVQendAFz1fQ2IMMbzWvHUmBCs0TtAFLGlBvMwuf_I/edit?usp=sharing
