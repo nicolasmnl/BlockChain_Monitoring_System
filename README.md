@@ -16,7 +16,7 @@
 <img src="https://github.com/nicolasmnl/BlockChain_Monitoring_System/blob/main/readme_images/BlockChain.gif" width="450" height="300">
 
 
-<p>Basically, BlockChain is a decentralized system of recording information(kind of a database) in a way that makes it difficult or almost impossiple to change, hac ou cheat the system.</p>
+<p>Basically, BlockChain is a decentralized system of recording information(kind of a database) in a way that makes it difficult or almost impossiple to change, hack or cheat the system.</p>
 
 <p>A blockchain is essentially a digital book of transactions that is duplicated and distributed across the entire network of computer systems on the blockchain. Each block in the chain contains a number os transactions, and every time a new transaction occurs on the blockchain, a record of that transaction is added to every participant's book.</p>
 
